@@ -1,4 +1,4 @@
-public class Manager extends Employee{
+public final class Manager extends BaseEmployee implements IName {
 
     private int numberOfSubordinates;
 
@@ -16,7 +16,7 @@ public class Manager extends Employee{
     }
 
     @Override
-    public int getSalary(MonthUtils.Month[] monthArray) {
+    public int getSalary(MonthUtils.IMonth[] monthArray) {
         int workDays = 0;
         int salarySum = 0;
         for (int i = 0; i < monthArray.length; i++) {
